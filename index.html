@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIESEL — ECHO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* RESET */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* COLORS */
+      :root {
+        --red: #8b0000;
+        --dim: rgba(255, 255, 255, 0.4);
+      }
+
+      body {
+        background: black;
+        color: white;
+        font-family: "Barlow Condensed", sans-serif;
+      }
+
+      /* NAV BAR */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        padding: 0 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(0, 0, 0, 0.9);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: 900;
+        letter-spacing: 0.15em;
+        cursor: pointer;
+      }
+      .logo span {
+        color: var(--red);
+      }
+
+      nav ul {
+        display: flex;
+        gap: 36px;
+        list-style: none;
+      }
+
+      nav a {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--dim);
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      nav a:hover,
+      nav a.active {
+        color: white;
+      }
+
+      /* PAGES */
+      section {
+        display: none;
+        min-height: 100vh;
+        padding-top: 60px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      section.visible {
+        display: flex;
+      }
+
+      /* HOME PAGE */
+      #home {
+        gap: 32px;
+        text-align: center;
+      }
+
+      .home-title {
+        font-size: clamp(72px, 12vw, 130px);
+        font-weight: 900;
+        line-height: 0.88;
+        text-transform: uppercase;
+      }
+
+      .home-title em {
+        font-style: normal;
+        color: var(--red);
+      }
+
+      #home img {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      /* DESIGN PAGE */
+      #design {
+        padding: 0;
+      }
+
+      #design iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        flex: 1;
+      }
+
+      /* COLORS PAGE */
+      #colors {
+        gap: 60px;
+        padding: 100px 64px;
+        align-items: flex-start;
+      }
+
+      .page-title {
+        font-size: clamp(52px, 7vw, 88px);
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .swatches {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .swatch {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 28px;
+      }
+
+      .sw-onyx {
+        background: #0c0c0c;
+      }
+      .sw-red {
+        background: #120000;
+      }
+      .sw-sand {
+        background: #161210;
+      }
+
+      .sw-circle {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .sw-name {
+        font-size: 28px;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .sw-finish {
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--dim);
+      }
+
+      /* FOOTER */
+      footer {
+        padding: 28px 48px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      footer span {
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.18);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="logo" onclick="show('home')">DIESEL<span>.</span></div>
+      <ul>
+        <li><a class="active" onclick="show('home', this)">Home</a></li>
+        <li><a onclick="show('design', this)">Design</a></li>
+        <li><a onclick="show('colors', this)">Colors</a></li>
+      </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="visible">
+      <h1 class="home-title">DIESEL<br /><em>ECHO</em></h1>
+      <img src="images/headphone.png" alt="Diesel Echo Headphones" />
+    </section>
+
+    <!-- DESIGN -->
+    <section id="design" style="padding: 0">
+      <iframe
+        src="https://my.spline.design/untitledcopy-PlwXU06RUQ0Co66seoEgDS6E/"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    <!-- COLORS -->
+    <section id="colors">
+      <h2 class="page-title">Colors</h2>
+      <div class="swatches">
+        <div class="swatch sw-onyx">
+          <div class="sw-circle" style="background: #222"></div>
+          <div class="sw-name">Onyx Black</div>
+          <div class="sw-finish">Matte</div>
+        </div>
+        <div class="swatch sw-red">
+          <div class="sw-circle" style="background: #6b0000"></div>
+          <div class="sw-name">Diesel Red</div>
+          <div class="sw-finish">Gloss</div>
+        </div>
+        <div class="swatch sw-sand">
+          <div class="sw-circle" style="background: #9c7a50"></div>
+          <div class="sw-name">Raw Sand</div>
+          <div class="sw-finish">Satin</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>DIESEL</span>
+    </footer>
+
+    <!-- JAVASCRIPT: handles page switching -->
+    <script>
+      function show(id, link) {
+        // hide all pages
+        document.querySelectorAll("section").forEach((s) => {
+          s.classList.remove("visible");
+          s.style.display = "none";
+        });
+
+        // show the clicked page
+        document.getElementById(id).style.display = "flex";
+        document.getElementById(id).classList.add("visible");
+
+        // update nav highlight
+        document
+          .querySelectorAll("nav a")
+          .forEach((a) => a.classList.remove("active"));
+        if (link) link.classList.add("active");
+
+        window.scrollTo(0, 0);
+      }
+
+      // attach click events to nav links
+      document.querySelectorAll("nav a").forEach((a, i) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          show(["home", "design", "colors"][i], a);
+        });
+      });
+    </script>
+  </body>
+</html>
