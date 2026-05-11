@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIESEL — ECHO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===================== NAV ===================== -->
+    <nav>
+      <div class="logo" onclick="show('home')">DIESEL<span>.</span></div>
+      <ul>
+        <li><a class="active" onclick="show('home', this)">Home</a></li>
+        <li><a onclick="show('gallery', this)">Gallery</a></li>
+        <li><a onclick="show('design', this)">Design</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===================== HOME ===================== -->
+    <section id="home" class="visible">
+      <div class="home-left">
+        <h1 class="home-title">DIESEL<br /><em>ECHO</em></h1>
+        <p
+          class="home-sub"
+          style="
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            letter-spacing: 0.08em;
+            text-transform: none;
+            font-weight: 300;
+            max-width: 340px;
+            line-height: 1.8;
+          "
+        >
+          Chrome-finished headphones designed through Diesel's industrial visual
+          language.
+        </p>
+      </div>
+      <div class="home-right">
+        <div id="loader-home">
+          <span>Loading</span>
+          <div class="loader-bar"></div>
+        </div>
+        <iframe
+          src="https://my.spline.design/untitledcopycopycopy-zNshBMPjyZ5H99OIBlthp62z/"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- ABOUT - appears below home on scroll -->
+    <div
+      id="about-section"
+      style="
+        display: none;
+        min-height: 60vh;
+        padding: 80px;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      "
+    >
+      <div
+        style="
+          border-left: 2px solid rgba(255, 255, 255, 0.2);
+          padding: 24px 32px;
+          max-width: 500px;
+        "
+      >
+        <div
+          style="
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 16px;
+          "
+        >
+          About
+        </div>
+        <div
+          style="
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.7;
+            color: white;
+            letter-spacing: 0.03em;
+          "
+        >
+          More than a standard audio device, the Diesel Echo is designed as an
+          extension of movement, identity, and contemporary fashion culture.
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section id="gallery">
+      <!-- METAL -->
+      <div class="gallery-section">
+        <div class="gallery-title">Metal</div>
+        <div class="masonry">
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/metal1.png',
+                  'images/pics headpones/metal2.png',
+                  'images/pics headpones/metal3.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="images/pics headpones/metal1.png" alt="Metal 1" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/metal1.png',
+                  'images/pics headpones/metal2.png',
+                  'images/pics headpones/metal3.png',
+                ],
+                1,
+              )
+            "
+          >
+            <img src="images/pics headpones/metal2.png" alt="Metal 2" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/metal1.png',
+                  'images/pics headpones/metal2.png',
+                  'images/pics headpones/metal3.png',
+                ],
+                2,
+              )
+            "
+          >
+            <img src="images/pics headpones/metal3.png" alt="Metal 3" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SILVER -->
+      <div class="gallery-section">
+        <div class="gallery-title">Silver</div>
+        <div class="masonry">
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/silver1.png',
+                  'images/pics headpones/silver2.png',
+                  'images/pics headpones/silver3.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="images/pics headpones/silver1.png" alt="Silver 1" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/silver1.png',
+                  'images/pics headpones/silver2.png',
+                  'images/pics headpones/silver3.png',
+                ],
+                1,
+              )
+            "
+          >
+            <img src="images/pics headpones/silver2.png" alt="Silver 2" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/silver1.png',
+                  'images/pics headpones/silver2.png',
+                  'images/pics headpones/silver3.png',
+                ],
+                2,
+              )
+            "
+          >
+            <img src="images/pics headpones/silver3.png" alt="Silver 3" />
+          </div>
+        </div>
+      </div>
+
+      <!-- BLUE -->
+      <div class="gallery-section">
+        <div class="gallery-title">Blue</div>
+        <div class="masonry">
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/blue1.png',
+                  'images/pics headpones/blue2.png',
+                  'images/pics headpones/blue3.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="images/pics headpones/blue1.png" alt="Blue 1" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/blue1.png',
+                  'images/pics headpones/blue2.png',
+                  'images/pics headpones/blue3.png',
+                ],
+                1,
+              )
+            "
+          >
+            <img src="images/pics headpones/blue2.png" alt="Blue 2" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/blue1.png',
+                  'images/pics headpones/blue2.png',
+                  'images/pics headpones/blue3.png',
+                ],
+                2,
+              )
+            "
+          >
+            <img src="images/pics headpones/blue3.png" alt="Blue 3" />
+          </div>
+        </div>
+      </div>
+
+      <!-- MARBLE -->
+      <div class="gallery-section">
+        <div class="gallery-title">Marble</div>
+        <div class="masonry">
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/marble1.png',
+                  'images/pics headpones/marble2.png',
+                  'images/pics headpones/marble3.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="images/pics headpones/marble1.png" alt="Marble 1" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/marble1.png',
+                  'images/pics headpones/marble2.png',
+                  'images/pics headpones/marble3.png',
+                ],
+                1,
+              )
+            "
+          >
+            <img src="images/pics headpones/marble2.png" alt="Marble 2" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/marble1.png',
+                  'images/pics headpones/marble2.png',
+                  'images/pics headpones/marble3.png',
+                ],
+                2,
+              )
+            "
+          >
+            <img src="images/pics headpones/marble3.png" alt="Marble 3" />
+          </div>
+        </div>
+      </div>
+
+      <!-- COPPER -->
+      <div class="gallery-section">
+        <div class="gallery-title">Copper</div>
+        <div class="masonry">
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/copper1.png',
+                  'images/pics headpones/copper2.png',
+                  'images/pics headpones/copper3.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="images/pics headpones/copper1.png" alt="Copper 1" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/copper1.png',
+                  'images/pics headpones/copper2.png',
+                  'images/pics headpones/copper3.png',
+                ],
+                1,
+              )
+            "
+          >
+            <img src="images/pics headpones/copper3.png" alt="Copper 3" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/copper1.png',
+                  'images/pics headpones/copper2.png',
+                  'images/pics headpones/copper3.png',
+                ],
+                2,
+              )
+            "
+          >
+            <img src="images/pics headpones/copper2.png" alt="Copper 2" />
+          </div>
+        </div>
+      </div>
+
+      <!-- PURPLE MARBLE -->
+      <div class="gallery-section">
+        <div class="gallery-title">Purple Marble</div>
+        <div class="masonry">
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/purple1.png',
+                  'images/pics headpones/purple2.png',
+                  'images/pics headpones/purple3.png',
+                ],
+                0,
+              )
+            "
+          >
+            <img src="images/pics headpones/purple1.png" alt="Purple 1" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/purple1.png',
+                  'images/pics headpones/purple2.png',
+                  'images/pics headpones/purple3.png',
+                ],
+                1,
+              )
+            "
+          >
+            <img src="images/pics headpones/purple3.png" alt="Purple 3" />
+          </div>
+          <div
+            class="masonry-item"
+            onclick="
+              openLightbox(
+                [
+                  'images/pics headpones/purple1.png',
+                  'images/pics headpones/purple2.png',
+                  'images/pics headpones/purple3.png',
+                ],
+                2,
+              )
+            "
+          >
+            <img src="images/pics headpones/purple2.png" alt="Purple 2" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DESIGN ===================== -->
+    <section id="design" style="flex-direction: column">
+      <!-- INTRO TEXT — user reads while 3D loads in background -->
+      <div
+        style="
+          width: 100%;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 0 80px;
+          gap: 60px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        "
+      >
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 24px">
+          <div
+            style="
+              font-size: 11px;
+              letter-spacing: 0.35em;
+              text-transform: uppercase;
+              color: var(--red);
+            "
+          >
+            Diesel Echo — Design
+          </div>
+          <h2
+            style="
+              font-size: clamp(60px, 9vw, 120px);
+              font-weight: 900;
+              text-transform: uppercase;
+              line-height: 0.9;
+            "
+          >
+            CRAFTED<br />FOR THE<br />BOLD.
+          </h2>
+          <p
+            style="
+              font-size: 16px;
+              font-weight: 700;
+              color: rgba(255, 255, 255, 0.5);
+              max-width: 420px;
+              line-height: 1.8;
+              letter-spacing: 0.04em;
+            "
+          >
+            The Diesel Echo combines sculptural details with an industrial
+            aesthetic. Featuring a carved metal headband, metallic hardware, and
+            six distinct colorways, each version brings a different feel to the
+            design. Scroll to explore the headphones in 3D.
+          </p>
+          <div
+            style="
+              font-size: 11px;
+              letter-spacing: 0.3em;
+              text-transform: uppercase;
+              color: rgba(255, 255, 255, 0.25);
+              margin-top: 16px;
+            "
+          >
+            ↓ Scroll to explore
+          </div>
+        </div>
+        <div
+          style="
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <img
+            src="images/pics headpones/sidepic.png"
+            alt="Diesel Echo"
+            style="width: 70%; max-width: 420px; height: auto; display: block"
+          />
+        </div>
+      </div>
+
+      <!-- 3D SCENE -->
+      <div style="width: 100%; height: 100vh; position: relative">
+        <div
+          id="loader-design"
+          style="
+            position: absolute;
+            inset: 0;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            z-index: 10;
+            transition: opacity 0.5s;
+          "
+        >
+          <span
+            style="
+              font-size: 11px;
+              letter-spacing: 0.3em;
+              text-transform: uppercase;
+              color: rgba(255, 255, 255, 0.3);
+            "
+            >Loading Design</span
+          >
+          <div class="loader-bar"></div>
+        </div>
+        <iframe
+          id="design-iframe"
+          src=""
+          allowfullscreen
+          style="width: 100%; height: 100%; border: none"
+        ></iframe>
+        <div class="design-info">
+          <div class="design-info-title">Explore the Design</div>
+          <div class="design-info-body">
+            Click on the color discs on the platform to see the Diesel Echo in
+            different finishes. Each colorway is a unique expression of the
+            design.
+          </div>
+        </div>
+        <div
+          style="
+            position: absolute;
+            right: 28px;
+            top: 28px;
+            width: 220px;
+            z-index: 20;
+            border-left: 2px solid rgba(255, 255, 255, 0.15);
+            padding: 16px 20px;
+            background: rgba(0, 0, 0, 0.6);
+          "
+        >
+          <div
+            style="
+              font-size: 11px;
+              letter-spacing: 0.3em;
+              text-transform: uppercase;
+              color: var(--dim);
+              margin-bottom: 10px;
+            "
+          >
+            About
+          </div>
+          <div
+            style="
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 1.7;
+              color: rgba(255, 255, 255, 0.6);
+              letter-spacing: 0.03em;
+            "
+          >
+            Inspired by streetwear, club culture, and techwear, the Diesel Echo
+            combines industrial metal detailing with bold colorways ranging from
+            monochrome finishes to saturated tones.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LIGHTBOX ===================== -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" onclick="closeLightbox()">×</button>
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-nav">
+        <button onclick="lightboxPrev()">← Prev</button>
+        <button onclick="lightboxNext()">Next →</button>
+      </div>
+    </div>
+
+    <footer><span>DIESEL</span></footer>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script>
+      // PAGE SWITCHING
+      function show(id, link) {
+        document
+          .querySelectorAll("section")
+          .forEach((s) => s.classList.remove("visible"));
+        document.getElementById(id).classList.add("visible");
+        document
+          .querySelectorAll("nav a")
+          .forEach((a) => a.classList.remove("active"));
+        if (link) link.classList.add("active");
+        document.getElementById("about-section").style.display =
+          id === "home" ? "flex" : "none";
+        window.scrollTo(0, 0);
+      }
+
+      // show about on initial load
+      document.getElementById("about-section").style.display = "flex";
+
+      // attach nav clicks
+      document.querySelectorAll("nav a").forEach((a, i) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          show(["home", "gallery", "design"][i], a);
+        });
+      });
+
+      // HOME LOADER - hide after 3s
+      setTimeout(() => {
+        const hl = document.getElementById("loader-home");
+        hl.style.opacity = "0";
+        setTimeout(() => (hl.style.display = "none"), 500);
+      }, 3000);
+
+      // DESIGN - load immediately in background
+      document.getElementById("design-iframe").src =
+        "https://my.spline.design/untitledcopy-PlwXU06RUQ0Co66seoEgDS6E/";
+
+      // DESIGN LOADER - hide after 10s
+      setTimeout(() => {
+        const dl = document.getElementById("loader-design");
+        dl.style.opacity = "0";
+        setTimeout(() => (dl.style.display = "none"), 500);
+      }, 10000);
+
+      // PREVENT SPLINE FROM CAPTURING SCROLL EVENTS
+      let scrollTimer;
+      const designIframe = document.getElementById("design-iframe");
+      window.addEventListener("scroll", () => {
+        designIframe.style.pointerEvents = "none";
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          designIframe.style.pointerEvents = "auto";
+        }, 500);
+      });
+
+      // LIGHTBOX
+      let currentImgs = [],
+        currentIdx = 0;
+
+      function openLightbox(imgs, idx) {
+        currentImgs = imgs;
+        currentIdx = idx;
+        document.getElementById("lightbox-img").src = imgs[idx];
+        document.getElementById("lightbox").classList.add("open");
+      }
+      function closeLightbox() {
+        document.getElementById("lightbox").classList.remove("open");
+      }
+      function lightboxNext() {
+        currentIdx = (currentIdx + 1) % currentImgs.length;
+        document.getElementById("lightbox-img").src = currentImgs[currentIdx];
+      }
+      function lightboxPrev() {
+        currentIdx = (currentIdx - 1 + currentImgs.length) % currentImgs.length;
+        document.getElementById("lightbox-img").src = currentImgs[currentIdx];
+      }
+
+      document
+        .getElementById("lightbox")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeLightbox();
+        });
+    </script>
+  </body>
+</html>
